@@ -1,0 +1,344 @@
+//print line
+void main() {
+    print('hello');  
+}
+.................................................................................................................................................................................
+//print varable
+void main() {
+  String name= "tabib";
+  int a= 2;
+  double b= 2.4;
+  bool c = false;
+  List arr = [1,2,3];
+  Map arr2 = {'name':'tabib','city':'dhaka'};
+  var m = 5.6000;
+  var n = 'hello';
+    print(name); 
+  print(a);
+  print(b);
+  print(c);
+  print(arr);
+  print(arr[2]);
+  print(arr2);
+   print(arr2['city']);
+  print(m);
+  print(n);
+}
+..............................................................................................................................................................................
+//string
+void main() {
+  //string concat
+  var name = "my name is tabib";
+  var fname= "FATIN";
+   var mname= "israq";
+   String lname= "tabib"; 
+  print(fname +' '+ mname +' '+ lname);
+  
+    //string lowercase
+  fname = fname.toLowerCase();
+  print(fname);
+  
+      //string lowercase
+  mname = mname.toUpperCase();
+  print(mname);
+  
+  //string lenght
+  print(lname.length);
+   print(mname.length);
+  
+  //string compare
+  print(mname.compareTo(fname)); // mnane is big
+  
+   //string replace
+  print(name.replaceAll('tabib','Tamim'));
+  
+  //string split
+  print(name.split(' '));
+  var v = name.split(' ');
+  print(v[2]);
+  
+  //substring 
+  print(name.substring(4,8));
+}
+...........................................................................................................................................................
+//operation
+void main() {
+ var a = 10;
+  var b= 20;
+  print( a+b);
+  print(a-b);
+  print(a*b);
+  print(a/b);
+  print(a%b);
+  print(a~/b); // approximate value 
+  print(b is double);
+  print(b is! int);
+  print(b is String);
+  print (a>30 ? "A boro":"A choto"); // it works as if else
+  var hehe = "tabib";
+    print(hehe..toUpperCase()..substring(3));
+}
+..................................................................................................................................................................
+//function
+void main() {
+  getnumber(10,20);
+  print(getnumber(10,20));
+  getnumber2(10,20);
+  print(getnumber2(10,20));
+   getnumber3(10);
+  print(getnumber3(10));
+  getnumber4(10, b:20,c:30);
+  print(getnumber4(10, c:20,b:30));
+}
+getnumber(int a, var b) => a+b; 
+
+getnumber2(int a, var b)  {
+  return a+b;
+}
+
+getnumber3(int a, [var b= 20])  {
+  return a+b;
+}
+
+getnumber4(int a, {var b, var c})  {
+  return a+b*c;
+}
+................................................................................................................................................................
+//list - orderd array list
+void main() {
+  //fixed
+  List<int> li=List.filled(4,0);
+  li[0] = 10;
+  li[1] = 20;
+  li[2] = 10;
+  li[3] = 60;
+  print(li);
+   print("python for");
+  for( int x in li){
+    print(x);
+  }
+   print("foreach");
+  li.forEach((x)=>print(x));
+  
+   print("c++ for");
+  for( int x=0; x<li.length;x++){
+    print(li[x]);
+  }
+  
+  print("GROTH");
+ //growth
+ var lii=[];
+  lii.add(10);
+  lii.add(20);
+  lii.add(20);
+  print(lii);
+  
+   print("python for");
+  for( int x in lii){
+    print(x);
+  }
+   print("foreach");
+  lii.forEach((x)=>print(x));
+  
+   print("c++ for");
+  for( int x=0; x<lii.length;x++){
+    print(lii[x]);
+  }
+}
+.................................................................................................................................................................
+//set - unorder array list
+void main() {
+  Set <int> sr = {};
+  sr.add(10);
+  sr.add(20);
+  sr.add(10);
+  print (sr);
+  
+   print("python for");
+  for( int x in sr){
+    print(x);
+  }
+   print("foreach");
+  sr.forEach((x)=>print(x));
+  }
+ ...................................................................................................................................................................
+//map - unorder array list work with key
+void main() {
+  Map <String,String> sr = { "Name":"Tabib", "City":"Dhaka"};
+ sr["house"]= "10";
+  print (sr);
+  
+   print("python for");
+  for( String x in sr.values){
+    print(x);
+  }
+   print("foreach");
+  sr.forEach((x,y)=>print(x+" "+y));
+  }
+..............................................................................................................................................................................
+//oop 
+void main() {
+ var obj = cls();
+  obj.name = "Tabib";
+  obj.fun();
+  
+  var obj1 = cls();
+  obj1.name = "Tamim";
+  obj1.fun();
+  
+  var obj2 = cls1("Tabib");
+  obj2.fun();
+  
+  var obj3 = cls2();
+  obj3.name = "Tabib";
+  obj3.fun();
+  
+  var obj4 = cls3("Tabib");
+  obj4.fun();
+  
+  var obj5= cls4.myConstuctor("Tabib");
+  obj5.fun();
+  }
+ 
+class cls{
+  var name;
+  fun(){
+    print("object:");
+    print("hello1"+" "+ name);
+  }
+}
+
+class cls1{
+  var name;
+  cls1(name){
+    print("Paramitered constructor: ");
+    this.name = name;
+  }
+  fun(){
+    print("hello2"+" "+ name);
+  }
+}
+class cls3{
+  var name;
+  cls3(this.name){
+    print("Paramitered constructor shortcut:");
+  }
+  fun(){
+    print("hello4"+" "+ name);
+  }
+}
+class cls2{
+  var name;
+  cls2(){
+    print("Default constructor:");
+  }
+  fun(){
+    print("hello3"+" "+ name);
+  }
+}
+class cls4{
+  var name;
+  cls4.myConstuctor(this.name){
+    print("Named constructor:");
+  }
+  fun(){
+    print("hello5"+" "+ name);
+  }
+}
+.................................................................................................................................................................................................
+//inherited $ function overloading 
+void main() {
+ var obj = cls1();
+  obj.name = "Tabib";
+ obj.fun();
+print("example:");
+  var obj1=hr();
+  obj1.role();
+  print("overloading function::");
+  var obj2=hr1();
+  obj2.fun1();
+  }
+ 
+class cls{
+  var name;
+  fun(){
+    print("inherited object:");
+    print("hello1"+" "+ name);
+  }
+  cls(){print("hello");}
+}
+class cls1 extends cls{
+  cls1(){
+  print("inherited object2");}
+}
+
+class emp{
+  var name="Tabib";
+  var desi = "Student";
+}
+class hr extends emp{
+  role(){
+    print(desi);
+  }
+}
+
+class emp1{
+   var name= "Fatin";
+   fun1(){
+    print("heelo");
+  }
+}
+class hr1 extends emp1{
+   var name= "Tabib";
+  fun1(){
+    print(super.name);
+    print(name);
+    super.fun1();
+    print("heelo2");
+  }
+}
+............................................................................................................................................................................................
+//abstract cls 
+void main() {
+ var obj = cls1();
+  print(obj.name);
+ obj.fun();
+
+  }
+ 
+abstract class cls{
+ var name = "Tabib";
+  fun();
+}
+class cls1 extends cls{
+ fun(){
+   print("hello");
+ }
+}
+.....................................................................................................................................................................
+//implements cls 
+void main() {
+ var obj = cls2();
+ obj.fun();
+
+  }
+ 
+class cls{
+
+  fun(){
+    print("hello");
+  }
+}
+class cls1{
+ fun1(){
+   print("hello");
+ }
+}
+class cls2 implements cls,cls1{
+ fun(){
+   print("hello");
+ }
+  fun1(){
+   print("hello");
+ }
+}
